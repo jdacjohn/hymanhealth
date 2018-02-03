@@ -1,0 +1,61 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 5//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+    <title>My App</title>
+
+	<script>
+		var dev = true; // I recommend sniffing the domain and testing for your test and prod to set this
+		var dir = "code_v1";
+
+		djConfig = {
+			isDebug:dev,
+			debugAtAllCosts:false,
+			devBuild:dev,
+			devDojo:true,
+			parseOnLoad:true
+		}
+		window.debug = djConfig.isDebug;
+	</script>
+
+	<script>
+		var str = "";
+		if(djConfig.devDojo){
+			// using dojo source. for first starting out.
+			djConfig.modulePaths = {app:"../html/app", 'dojox':"../dojox"};
+			str += '<scr'+'ipt src="../dojo/dojo.js"></sc'+'ript>';
+			str += '<link href="css/dev_dojo.css" rel="stylesheet" />';
+			str += '<link href="css/app.css" rel="stylesheet" />';
+
+		}else if(djConfig.devBuild){
+			// local usage
+			djConfig.modulePaths = {'app':"../../../app", 'dojox':"../../../../dojox"};
+			str += '<scr'+'ipt src="'+dir+'/dojo/dojo/dojo.js.uncompressed.js"></sc'+'ript>';
+			str += '<link href="'+dir+'/dojo/css/dojo.css" rel="stylesheet" />';
+			str += '<link href="../dojox/form/resources/FileUploader.css" rel="stylesheet" />';
+			str += '<link href="css/app.css" rel="stylesheet" />';
+
+		}else{
+			// production
+			djConfig.modulePaths = {'app':"../../../app"};
+			str += '<link href="'+dir+'/dojo/css/dojo.css" rel="stylesheet" />';
+			str += '<link href="'+dir+'/dojo/css/app.css" rel="stylesheet" />';
+			str += '<scr'+'ipt src="'+dir+'/dojo/dojo/dojo.js"></sc'+'ript>';
+			str += '<scr'+'ipt src="'+dir+'/dojo/dojo/app.js"></sc'+'ript>';
+		}
+		document.write(str);
+	</script>
+
+
+	<script>
+		if(djConfig.devBuild || djConfig.devDojo){
+			dojo.require("app.dojo_requires");
+			dojo.require("app.app_requires");
+		}
+	</script>
+
+</head>
+<body class="claro">
+	<h1>My Dojo App</h1>
+	<div dojoType="dijit.form.Button">Test button</div>
+</body>
+</html>

@@ -1,0 +1,26 @@
+	Copyright (c) 2004-2010, The Dojo Foundation All Rights Reserved.
+	Available via Academic Free License >= 2.1 OR the modified BSD license.
+	see: http://dojotoolkit.org/license for details
+	
+	Author: Mike Wilcox
+	Website: http://clubajax.org
+
+Dojo Scaffold
+
+This is an advanced layout of a Dojo application. Advanced because the Dojo files are *outside* of the application files. This is done for situations where it is not optimum to put 130 megabytes and 6000 files on the server. Only the build (the "release") is put on the server.  
+
+Because SVN puts puts folders and files in every folder of a repo, there are Unix shell scripts included that help you manage the build and SVN. Using the scripts, with one command you can remove the old build, build a new one, re-add it to the repo, and commit. It will even log the commit in the CommitLogs.txt file. The commit log is quite a bit handier than relying on "SVN log", and has a switch for the type of commit it is (bug fix, feature, etc).
+
+The directory structure should be as follows:
+
+dojo
+dijit
+dojox
+util
+html 		(the scaffold files)
+	app 	(your custom JavaScript)
+	code_v1 (The Dojo build, which can be versioned to code_v2, code_v3, etc.)
+	tests
+	shells 	(Unix scripts here)
+	css
+		img

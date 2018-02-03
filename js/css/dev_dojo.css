@@ -1,0 +1,9 @@
+/*
+   If you wish to use the dev build of Dojo along with the proper css,
+   this file should match css/dojo.css except that the paths will go up
+   one extra directory.
+*/
+@import "../../dijit/themes/dijit.css";
+@import "../../dijit/themes/claro/Common.css";
+@import "../../dijit/themes/claro/form/Common.css";
+@import "../../dijit/themes/claro/form/Button.css";

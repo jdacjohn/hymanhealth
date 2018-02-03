@@ -1,0 +1,38 @@
+# .gitignore 
+
+# Ignore these folders always
+
+
+# Ignore these files anywhere
+*.log
+*.komodoproject
+*.psd
+*.sav
+
+.DS_store
+_siteinfo
+._*
+
+Copy of*.*
+vssver.scc
+web.config
+
+#  WordPress Files and Folders
+wp-config.php
+wp-content/advanced-cache.php
+wp-content/backup-db/
+wp-content/backups/
+wp-content/blogs.dir/
+wp-content/cache/
+wp-content/upgrade/
+wp-content/uploads/
+wp-content/wp-cache-config.php
+wp-content/plugins/hello.php
+
+/readme.html
+/sitemap.xml
+/sitemap.xml.gz
+
+# Site specific Files and Folders
+hyman article 1 copy.jpg
+

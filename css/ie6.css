@@ -1,0 +1,10 @@
+/* 
+
+HymanHealth - CSS File
+
+USE THIS STYLE SHEET EXCLUSIVELY FOR IE6
+
+*/
+#main_container, #main_container_inner{ height:84%;}
+
+textarea.text-input{overflow:scroll; background-attachment:fixed;}

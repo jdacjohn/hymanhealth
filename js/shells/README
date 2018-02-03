@@ -1,0 +1,12 @@
+Shell Scripts Unix/Mac only (sorry Windows users)
+
+The file of most use will be the code_build.sh. This runs the Dojo Build tool and places the build
+in code_v1, based on the app_profile.js in the HTML root. Use the command line and navigate to the
+shells directory, ensure you have permissions (chmod 755 code_build.sh) and run the script
+(./code_build.sh)
+
+Also valuable is version.sh, which will rename everything in the app from "code_v1" to "code_v2". You have to manually edit the file to increase the versioning after that. The purpose of versioning is when you release a new code base, it all be in a completely different folder and all files accessed via different paths. This will help prevent browsers from caching. Safari may still give you fits though.
+
+SVN USERS (on a Mac)
+
+The commit.sh handles some of the hairiness that SVN throws at you if you are not doing builds on a server. This file allows you to do the build locally and push up only the built code.

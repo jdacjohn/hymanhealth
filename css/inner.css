@@ -1,0 +1,55 @@
+/* 
+
+HymanHealth - CSS File
+
+*/
+
+/*** HEADER ***/
+#header_inner{background-image:url(../images/bg_header_inner.png); background-repeat:no-repeat; height:95px;}
+#header_inner h1{color:#fff; font-size:35px; font-weight:bold}
+#headertext{padding:35px 0px 0px 40px;}
+/*** END OF HEADER ***/
+
+
+/*** BLOG ***/
+.post{border-bottom:solid 1px #dadada; margin-bottom:20px; padding-bottom:20px;}
+.post h2{margin-bottom:3px;}
+.post h2 a{text-decoration:none;}
+.smalltext{padding:0px 0px 20px 0px; display:block;}
+#newsletter fieldset{margin:0px; padding:0px; border:0px;}
+/*** END OF BLOG ***/
+
+/*** CONTACT US ***/
+form{margin:0; padding:0;}
+fieldset{border:0px;}
+#contact_form{margin:0 auto; position:relative}
+label{margin:3px 0px; line-height:20px;}
+label.sp { width:3px;}
+span.error{color:red;text-align:left; font-size:11px !important;}
+
+#message{ margin-left:0px;}
+#message h2	{}
+#message p{margin:6px 0px; }
+
+input.text-input{background-image:url(../images/inputbox.gif); width:280px; background-repeat:no-repeat; padding:5px 5px 11px 5px; margin:0px 0px 5px 0px; border:0px; vertical-align:middle}
+textarea.text-input{background-image:url(../images/bg_textarea.gif); background-repeat:no-repeat; border:0px; width:442px; height:127px; padding:8px;background-attachment:scroll; vertical-align:top}
+#contact_form input:focus, #contact_form textarea:focus {border:0px; }
+input.button{ background-image:url(../images/but_send.gif); background-repeat:no-repeat; padding:0px; margin:0px; border:0px; width:88px; height:32px;left:0px; margin-top:5px; cursor:pointer;}
+/*** END OF CONTACT US ***/
+
+.claro .appSecure label {
+    width: 200px;
+    float: left;
+    text-align: right;
+    margin-right: 10px;
+    margin-left: 20px;
+    display: block;
+}
+
+.claro .appSecure .dijitButton {
+    margin-left: 200px;
+} 
+
+.claro .noListStyle {
+	list-style-type:none;
+}
